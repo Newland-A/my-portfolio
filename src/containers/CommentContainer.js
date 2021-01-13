@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Comment from '../components/Comment';
+import Comment from '../components/blog-components/Comment';
 // parent to comment
 class CommentContainer extends Component {
   constructor(props) {
