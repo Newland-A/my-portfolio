@@ -6,7 +6,7 @@ import {
 import './App.css';
 import Home from './containers/Home';
 import BlogContainer from './containers/BlogContainer';
-import Blog from './components/Blog'
+import Blog from './components/blog-components/Blog'
 
 function App() {
   return (
