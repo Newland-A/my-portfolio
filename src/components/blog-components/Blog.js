@@ -8,7 +8,8 @@ export default class Blog extends Component {
   }
 
   componentDidMount(){
-    fetch(`http://192.168.1.11:3001/posts/${this.state.postId}`)
+    debugger
+    fetch(`http://localhost:3000/posts/${this.state.postId}`)
     .then(resp => resp.json())
     .then(post => this.setState({
       ...this.state,
