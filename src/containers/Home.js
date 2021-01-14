@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import AboutMe from '../components/header/AboutMe';
 import Myname from '../components/header/Myname';
-import Title from '../components/blogs/Title';
-import Description from '../components/blogs/Description';
+// import Title from '../components/blogs/Title';
+// import Description from '../components/blogs/Description';
 import CampTitle from '../components/campground-finder/CampTitle';
 import CampDescription from '../components/campground-finder/CampDescription';
 import BlogContainer from './BlogContainer.js'
