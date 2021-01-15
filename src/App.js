@@ -6,7 +6,10 @@ import {
 import './App.css';
 import Home from './containers/Home';
 import BlogContainer from './containers/BlogContainer';
-import Blog from './components/blog-components/Blog'
+import Blog from './components/blog-components/Blog';
+// import Blog2 from './components/blog-components/Blog2';
+// import CampgroundContainer from './containers/CampgroundContainer'
+// import Campground from './components/campground-finder/Campground'
 
 function App() {
   return (
@@ -16,6 +19,8 @@ function App() {
           <Route exact path='/' component={Home} />
           <Route exact path='/blog' component={BlogContainer} />
           <Route exact path='/blog/:id' component={Blog} />
+          {/* <Route exact path='/campground' component={CampgroundContainer} /> */}
+          {/* <Route exact path='/campground/:campgroundId' component={Campground} /> */}
         </div>
       </div>
     </Router>
