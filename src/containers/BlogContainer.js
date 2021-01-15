@@ -11,11 +11,16 @@ class BlogContainer extends Component {
 
   render() {
     return (
-      <div className='blog'>
-        <h2><a href='/blog'>Blog...</a></h2>
-        <div className='blog-intro'>
-          <p>Among the Components for my portfolio, I was required to write several blogs as a requirement for graduation at <a rel='noopener noreferrer' href="https://flatironschool.com" target="_blank">Flatiron School</a>. Post graduation my Blogs will be featured here. I will attempt to continue to add to my personal blogs here, in respect of my potential employer.</p>
-        </div>
+        
+          <div className='blog'>
+            <h2><a href='/blog'>Blog...</a></h2>
+            <div className='blog-intro'>
+              <p>
+                Among the Components for my portfolio, I was required to write several blogs as a requirement for graduation at <a rel='noopener noreferrer' href="https://flatironschool.com" target="_blank">Flatiron School</a>. Post graduation my Blogs will be featured here. I will attempt to continue to add to my personal blogs here, in respect of my potential employer.
+              </p>
+            </div>
+          
+        
         <section className='blog-titles'>
         <div>
             <ul>
@@ -24,12 +29,11 @@ class BlogContainer extends Component {
               {this.props.blog.posts.map(post => {
                 
                 return (
-                  
+
                   <div className='blog-link' key={post.id}>
                     <NavLink to={`/blog/${post.id}`}>{post.title}</NavLink> 
-                      <li>{post.created_at.slice(0,10)}:<br /></li>
-                      
-                    </div>
+                      <li>{post.created_at.slice(0,10)}:<br /></li>  
+                  </div>
                 )
               })}
             </ul>
@@ -44,7 +48,7 @@ class BlogContainer extends Component {
             <li>I look forward to building on to each of my projects. With new features</li>
           </ul>
         </section>
-      </div>
+        </div>
     );
   }
 }
