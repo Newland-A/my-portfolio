@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+#projects-blogs {
+  float: right;
+}
+
+#tech-propjects {
+  float: left;
+}
+
+#project-campgrounds {
+  float: left;
+}
+
