@@ -6,6 +6,7 @@ class Myname extends Component {
       <div>
       {/* Change this to something */}
         <h1>My name is <strong>Amy Newland</strong></h1>
+        <h3>Wife-Mother, Software Engineer, Lifelong Learner</h3>
       </div>
     );
   }
