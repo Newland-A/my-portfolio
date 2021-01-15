@@ -18,7 +18,7 @@ class CommentContainer extends Component {
   }
 
   fetchComments = () => {
-    fetch('http://192.168.1.11:3001/comments')
+    fetch('http://localhost:3000/comments')
     .then(resp => resp.json())
     .then(comments => this.setState({
       ...this.state,
@@ -27,7 +27,7 @@ class CommentContainer extends Component {
   }
 
   sendComment = () => {
-    fetch('http://192.168.1.11:3001/comments', {
+    fetch('http://localhost:3000/comments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
