@@ -1,7 +1,8 @@
 export const fetchPosts = () => {
   return dispatch => {
     dispatch({type: 'FETCHING_POSTS'})
-    fetch('http://192.168.1.11:3001/posts')
+    // debugger
+    fetch('http://localhost:3000/posts')
     .then(resp => resp.json())
     .then(posts => {
       dispatch({
@@ -13,5 +14,6 @@ export const fetchPosts = () => {
         })
       })
     })
+    // debugger
   }
 }
