@@ -25,8 +25,11 @@ class CampgroundContainer extends Component {
         <div className='display-campgrounds'>
           <ul className='camp-properties'>
             <h2>Campgrounds: </h2>
+
             {this.props.campground.campgrounds.map(campground => {
+
               return (
+                
                 <div className='campground-link' key={campground.id}>
                   <NavLink to={`/campground/${campground.id}`}>{campground.name}</NavLink>
                   <li>{campground.img_url}</li>
@@ -53,4 +56,10 @@ class CampgroundContainer extends Component {
   }
 }
 
-export default CampgroundContainer;
+const mapStateToProps = state => {
+  return({
+    campground: state.campground
+  })
+}
+
+export default connect(mapStateToProps, {fetchCampgrounds})(CampgroundContainer);
