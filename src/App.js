@@ -21,8 +21,8 @@ function App() {
           <Route exact path='/' component={Home} />
           <Route exact path='/blog' component={BlogContainer} />
           <Route exact path='/blog/:id' component={Blog} />
-          <Route exact path='/campground' component={CampgroundContainer} />
-          <Route exact path='/campground/:campgroundId' component={Campground} />
+          <Route exact path='/campgrounds' component={CampgroundContainer} />
+          <Route exact path='/campgrounds/:id' component={Campground} />
          {/* <Route exact path='/campground' component={CampgroundContainer} /> */}
           {/* <Route exact path='/campground/:campgroundId' component={Campground} /> */}
         </div>
