@@ -22,22 +22,22 @@ class BlogContainer extends Component {
           
         
         <section className='blog-titles'>
-        <div>
-            <ul>
-              <h2>Posts:</h2>
-              
-              {this.props.blog.posts.map(post => {
+          <div>
+              <ul>
+                <h2>Posts:</h2>
                 
-                return (
+                {this.props.blog.posts.map(post => {
+                  
+                  return (
 
-                  <div className='blog-link' key={post.id}>
-                    <NavLink to={`/blog/${post.id}`}>{post.title}</NavLink> 
-                      <li>{post.created_at.slice(0,10)}:<br /></li>  
-                  </div>
-                )
-              })}
-            </ul>
-          </div>
+                    <div className='blog-link' key={post.id}>
+                      <NavLink to={`/blog/${post.id}`}>{post.title}</NavLink> 
+                        <li>{post.created_at.slice(0,10)}:<br /></li>  
+                    </div>
+                  )
+                })}
+              </ul>
+            </div>
         </section>
         <section className='goals-todo'>
           <ul>
@@ -58,4 +58,5 @@ const mapStateToProps = state => {
     blog: state.blog
   })
 }
+
 export default connect(mapStateToProps, { fetchPosts })(BlogContainer);
