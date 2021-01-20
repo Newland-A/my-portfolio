@@ -6,13 +6,13 @@ const initialState = {
 
 export default function campgroundReducer(state = initialState, action) {
   switch(action.type) {
-    case 'FETCHING_CAMPGROUNDS':
+    case 'FETCHING_CAMPS':
       return {
         ...state,
         currentActivity: 'Fetching campgrounds from server'
       }
 
-    case 'SOURCE_CAMPGROUNDS':
+    case 'SOURCE_CAMPS':
       return {
         ...state,
         campgrounds: action.payload,
