@@ -3,10 +3,11 @@ import { useSelector } from 'react-redux';
 import ReviewContainer from '../../containers/ReviewContainer.js'
 
 const Campground = ({ match }) => {
+  
   const { campgroundId } = match.params
 
   const campground = useSelector(state => state.campgrounds.find(campground => campground.id === campgroundId))
-
+  
   useEffect(() => {
     document.name = campground.name;
     document.description = campground.description;
