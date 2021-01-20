@@ -4,7 +4,9 @@ class CampDescription extends Component {
   render() {
     return (
       <div>
-        <p>This is how I spend my spare time. Maybe you would like to visit and leave a review and next time I have some spare time. I'll check it out.</p>
+         <p>
+            In my free time, I enjoy spending time with my family. Away from technology to reset my brain and connect with my loved ones. If your looking for a place to go maybe you would enjoy one of these places to spend time with your loved ones! 
+          </p>
       </div>
     );
   }
