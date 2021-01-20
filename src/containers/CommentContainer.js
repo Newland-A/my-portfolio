@@ -42,6 +42,13 @@ class CommentContainer extends Component {
     })
   }
 
+  handleNameChange = e => {
+    e.preventDefault()
+    this.setState({
+      ...this.state,
+      name: e.target.value
+    })
+  }
   
   handleContentChange = e => {
     e.preventDefault()
