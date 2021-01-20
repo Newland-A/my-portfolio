@@ -48,7 +48,7 @@ export default class Home extends Component {
         <section className="project-campgrounds">
           {/* <CampTitle />
            */}
-          <h2><NavLink to='/campground'>Campgrounds</NavLink></h2>
+          <h2><NavLink to='/campgrounds'>Campgrounds</NavLink></h2>
           <CampDescription />
           {/* Figure out how to display from the back end each campground */}
           {/* Also figure out a way to use the API from NPS */}
