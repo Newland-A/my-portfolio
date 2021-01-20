@@ -1,7 +1,7 @@
 export const fetchPosts = () => {
   return dispatch => {
     dispatch({type: 'FETCHING_POSTS'})
-    // debugger
+    // 
     fetch('http://localhost:3000/posts')
     .then(resp => resp.json())
     .then(posts => {
@@ -14,6 +14,6 @@ export const fetchPosts = () => {
         })
       })
     })
-    // debugger
+    // 
   }
 }
