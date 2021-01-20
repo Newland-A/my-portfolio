@@ -7,6 +7,7 @@ import {NavLink} from 'react-router-dom'
 import CampTitle from '../components/campground-finder/CampTitle';
 import CampDescription from '../components/campground-finder/CampDescription';
 import BlogContainer from './BlogContainer.js'
+import CampgroundContainer from './CampgroundContainer';
 export default class Home extends Component {
   render() {
     return (
@@ -45,7 +46,9 @@ export default class Home extends Component {
         </section>
 
         <section className="project-campgrounds">
-          <CampTitle />
+          {/* <CampTitle />
+           */}
+          <h2><NavLink to='/campground'>Campgrounds</NavLink></h2>
           <CampDescription />
           {/* Figure out how to display from the back end each campground */}
           {/* Also figure out a way to use the API from NPS */}
