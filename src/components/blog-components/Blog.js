@@ -33,7 +33,7 @@ import { useSelector } from 'react-redux';
         
       {/* // </div> */}
       </article>
-      {/* <CommentContainer postId={this.state.postId} /> */}
+      <CommentContainer postId={this.state.postId} />
     </section>
   )
 }
