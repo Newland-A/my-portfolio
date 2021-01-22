@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import { fetchPosts } from '../redux/actions/blogActions';
 import { NavLink } from 'react-router-dom'
-
+import NavBar from '../components/NavBar'
+import BlogIntro from '../components/blog-components/BlogIntro';
+import MyTodos from '../components/blog-components/MyTodos';
 class BlogContainer extends Component {
  
   componentDidMount() {
@@ -12,16 +14,12 @@ class BlogContainer extends Component {
   render() {
     
     return (
-        
-          <div className='blog'>
-            <h2><a href='/blog'>Blog...</a></h2>
-            <div className='blog-intro'>
-              <p>
-                Among the Components for my portfolio, I was required to write several blogs as a requirement for graduation at <a rel='noopener noreferrer' href="https://flatironschool.com" target="_blank">Flatiron School</a>. Post graduation my Blogs will be featured here. I will attempt to continue to add to my personal blogs here, in respect of my potential employer.
-              </p>
-            </div>
           
-        
+          <div className='blog'>
+          <NavBar />
+            <h2><a href='/blog'>Blog</a></h2>
+          <BlogIntro />
+          
         <section className='blog-titles'>
           <div>
               <ul>
@@ -41,13 +39,7 @@ class BlogContainer extends Component {
             </div>
         </section>
         <section className='goals-todo'>
-          <ul>
-            <h2>Things I'd Like To Achieve</h2>
-            <p>My graduation day will be Feb. 11th. Afterwards, I will be continueing to grow my knowledge.</p>
-            <li>Dive in understanding  <strong>AWS/ NODE.js / .NET /</strong> </li>
-            <li>I am excited to continue deeping my knowledge of Rails and JavaScript.</li>
-            <li>I look forward to building on to each of my projects. With new features</li>
-          </ul>
+          <MyTodos />
         </section>
         </div>
     );
