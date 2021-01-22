@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import { fetchCampgrounds} from '../redux/actions/campgroundActions';
 import { NavLink } from 'react-router-dom';
+import NavBar from '../components/NavBar'
+import CampIntro from '../components/campground-finder/CampIntro';
 
 class CampgroundContainer extends Component {
 
@@ -10,37 +12,24 @@ class CampgroundContainer extends Component {
   }
 
   render() {
-    // debugger
     return (
-        
         <div className='campgrounds'>
+        <NavBar />
           <h2> CampGrounds </h2>
-          <div className='campground-intro'>
-            <p>
-            In my free time, I enjoy spending time with my family. Away from technology to reset my brain and connect with my loved ones. If your looking for a place to go maybe you would enjoy one of these places to spend time with your loved ones! 
-            </p>
-          </div>
-        
+        <CampIntro />
       
       <section className='campground-body'>
         <div className='display-campgrounds'>
           <ul className='camp-properties'>
             
-            
-          {this.props.camp.campgrounds?.map(campground => {
-              {/* debugger */}
+          {this.props.camp.campgrounds.map(campground => {
+              
               return (
                 
                 <div className='campground-link' key={campground.id}>
                   <NavLink to={`/campgrounds/${campground.id}`}>{campground.name}</NavLink>
-                  {/* {/* <li>{campground.img_url}</li>
-                  <li>{campground.avg_score}</li> */}
                   <li>{campground.description}</li>
-                  {/* <li>{campground.hiking}</li>
-                  <li>{campground.tent}</li>
-                  <li>{campground.rv}</li>
-                  <li>{campground.hammocks}</li>
-                  <li>{campground.price}</li> */} 
+                  
                 </div>
               )
             })} 
