@@ -39,12 +39,12 @@ My personal portfolio. Utilizing a Rails backend with a postgresql database. Cre
   
 
 # Contribution
-  You are welcome to utilize any of the code in this repository. Code contributions for this project defeat the purpose of the challenge I set for myself but critiques and improvements are always welcome.
+  You are welcome to utilize any of the code in this repository. Code contributions for this project would defeat the purpose of the challenge, I set for myself but critiques and improvements are always welcome.
 
 # Contact
   Amy Newland - [LinkedIn](https://www.linkedin.com/in/amy-newland-developer/) - [Email](ajn252@gmail.com)
 
-  Project Link: 
+Project Link:  
 
 # License
   Distributed under the MIT License. See [LICENSE](https://choosealicense.com/licenses/mit/) for more information. © Amy Newland
