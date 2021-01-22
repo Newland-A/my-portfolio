@@ -1,12 +1,13 @@
-inport React from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const NavBar = () => {
   return (
     <div className='navbar'>
-      <NavLink to='/' className=''>Home</NavLink>
-      <NavLink to='/blogs' className=''>Blog</NavLink>
-      <NavLink to='/campground' className=''>CampGround Finder</NavLink>
+      <button><NavLink to='/' className=''>Home</NavLink> </button>
+      <button><NavLink to='/blogs' className=''>Blog</NavLink> </button>
+      <button><NavLink to='/technical-projects' className=''>Projects</NavLink></button>
+      <button><NavLink to='/campground' className=''>CampGrounds</NavLink></button>
     </div>
   )
 }
