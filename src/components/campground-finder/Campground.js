@@ -1,39 +1,55 @@
 // import React, { useEffect } from 'react';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import ReviewContainer from '../../containers/ReviewContainer.js'
+import ReviewContainer from '../../containers/ReviewContainer.js';
+// import NavBar from 'components/NavBar';
+import { Container } from 'semantic-ui-react';
+import { Image } from 'semantic-ui-react';
+import NavBar from '../NavBar.js';
 
 const Campground = ({ match }) => {
-  debugger
+  
   const { campgroundId } = match.params
-  debugger
+  
   const singleCamp = parseInt(campgroundId)
+  
+  const camps = useSelector(state => state.camp.campgrounds[singleCamp] )
   debugger
-  const camps = useSelector(state => state.campgrounds[singleCamp])
-  debugger
-  // useEffect(() => {
-  //   document.name = camps.name;
-  //   document.description = camps.description;
-  // })
-
+ 
   if(!camps) {
     return(
-      <section>
+      <div>
+      <NavBar />
+      
+      <Container>
         <p>
           That campground is not here yet! Please check back at a later time!</p>
-      </section>
+      </Container>
+      </div>
     )
   }
 
   return (
-    <section>
-      <div className="campground">
+    <div>
+      <NavBar />
+    
+      <Container>
+      
         <h2 id="camp-name">{camps.name}</h2>
+        <image>{camps.image_url}</image>
         <p className="camp-description">{camps.description}</p>
-        <p></p>
-      </div>
-      {/* <ReviewContainer campgroundId={this.state.campgroundId} /> */}
-    </section>
+        <p>Average Score: {camps.avg_score}</p>
+        <p>Price per night: {camps.price}</p>
+        <p>Hiking Trails: {camps.hiking}</p>
+        <p>Tent Camping: {camps.tent}</p>
+        <p>Can you use hammocks? {camps.hammocks}</p>
+        <p>RV Camping Spots: {camps.rv}</p>
+
+        
+       <ReviewContainer campgroundId={campgroundId} />
+      </Container>
+    </div>
+   
   )
 }
 
