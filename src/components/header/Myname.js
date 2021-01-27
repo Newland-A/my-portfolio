@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import { Container } from 'semantic-ui-react'
 
 class Myname extends Component {
   render() {
     return (
-      <div>
+      <Container>
       {/* Change this to something */}
-        <h1>My name is <strong>Amy Newland</strong></h1>
-        <h3>Wife - Mother - Software Engineer - Lifelong Learner</h3>
-      </div>
+        <h1>My name is Amy Newland</h1>
+        <h2>Wife - Mother - Software Engineer - Lifelong Learner</h2>
+        <br />
+      </Container>
     );
   }
 }
