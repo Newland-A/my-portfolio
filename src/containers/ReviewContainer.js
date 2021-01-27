@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Review from '../components/campground-finder/Review';
+import { Feed } from 'semantic-ui-react'
+import { Form } from 'semantic-ui-react';
 class ReviewContainer extends Component {
 
   constructor(props) {
@@ -82,19 +84,26 @@ handleSubmit = e => {
 
   render() {
     return (
-      <div className="reviews-wrapper">
+      
         <div className="new-reviews">
-          <form id="new-review-form" onSubmit={e => this.handleSubmit(e)}>
-            <input 
+        <Form>
+          {/* <form id="new-review-form" onSubmit={e => this.handleSubmit(e)}> */}
+
+            {/* <input 
               type="text" 
               placeholder="Title" 
-              onChange={e => this.handleTitleChange(e)} value={this.props.title} /><br />
-            <textarea 
+              onChange={e => this.handleTitleChange(e)} value={this.props.title} /><br />*/}
+              <Form.Field label='An HTML <textarea>' control='textarea' rows='6' />
+            {/*<textarea 
               onChange={e => this.handleDescriptionChange(e)}
-              value={this.props.description} placeholder="Enter Review" /><br />
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
+              value={this.props.description} placeholder="Enter Review" /><br />*/}
+              <Form.Field label='An HTML <button>' control='button'>
+      Submit
+    </Form.Field>
+            {/*<input type="submit" value="Submit" /> */}
+          {/* </form> */}
+          </Form>
+       
         {this.state.reviews.map(review => <Review name={review.title} description={review.description} score={review.score} id={review.id} created_at={review.created_at} />)}
       </div>
     );
