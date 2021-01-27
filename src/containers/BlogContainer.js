@@ -5,6 +5,8 @@ import { NavLink } from 'react-router-dom'
 import NavBar from '../components/NavBar'
 import BlogIntro from '../components/blog-components/BlogIntro';
 import MyTodos from '../components/blog-components/MyTodos';
+import { List } from 'semantic-ui-react';
+import { Container, Segment } from 'semantic-ui-react';
 class BlogContainer extends Component {
  
   componentDidMount() {
@@ -12,35 +14,39 @@ class BlogContainer extends Component {
   }
 
   render() {
-    
-    return (
-          
-          <div className='blog'>
+    return (  
+        <div className='blog'>
           <NavBar />
+          <br />
             <h2><a href='/blog'>Blog</a></h2>
           <BlogIntro />
-          
-        <section className='blog-titles'>
+          <br/>
+          <Container>
           <div>
-              <ul>
+              <List link>
                 <h2>Posts:</h2>
                 
                 {this.props.blog.posts.map(post => {
-                  
+                 
                   return (
-
+                    
+                    <Segment raised >
                     <div className='blog-link' key={post.id}>
-                      <NavLink to={`/blog/${post.id}`}>{post.title}</NavLink> 
-                        <li>{post.created_at.slice(0,10)}:<br /></li>  
+                      
+                      <h2><NavLink to={`/blog/${post.id}`}>{post.title}</NavLink> </h2>
+
+                        <List.Item >{post.created_at.slice(0,10)}:<br /></List.Item>  
                     </div>
+                    </Segment>
                   )
                 })}
-              </ul>
+              </List>
             </div>
-        </section>
-        <section className='goals-todo'>
+        </Container>
+        <br />
+        <Container >
           <MyTodos />
-        </section>
+        </Container>
         </div>
     );
   }
