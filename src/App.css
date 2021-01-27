@@ -36,16 +36,40 @@
     transform: rotate(360deg);
   }
 }
+/* Main Element Styles */
 
-#projects-blogs {
-  float: right;
+.navbar {
+background-color: #282c34;
+height: 50px;
+margin-bottom: 25px;
 }
 
-#tech-propjects {
+/* .home_intro {
+  float: inline-start;
+}
+/* Blog Styles */
+
+/* .blog-content {
+  margin: auto;
+  align-content: center;
+  width: 750px;
+}
+
+.blogs_home {
+float: right;
+width: 200px;
+} */
+
+/* Project Styles */
+
+/* .projects_home {
+  margin-top: ;
+  margin-bottom: ;
   float: left;
-}
+} */
 
-#project-campgrounds {
+/* Campground Styles */
+/* .campgrounds_home {
   float: left;
-}
-
+  
+} */
