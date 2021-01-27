@@ -1,14 +1,22 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { Button, Segment } from 'semantic-ui-react'
 
 const NavBar = () => {
   return (
     <div className='navbar'>
-      <button><NavLink to='/' className=''>Home</NavLink> </button>
-      <button><NavLink to='/blogs' className=''>Blog</NavLink> </button>
-      <button><NavLink to='/technical-projects' className=''>Projects</NavLink></button>
-      <button><NavLink to='/campground' className=''>CampGrounds</NavLink></button>
+      <Segment inverted>
+        <Button basic inverted color="black"><NavLink to='/' className=''>Home</NavLink> </Button>
+   
+        <Button basic inverted color="purple"><NavLink to='/blog' className=''>Blog</NavLink> </Button>  
+     
+        <Button basic inverted color="dark blue"><NavLink to='/technical-projects' className=''>Projects</NavLink></Button>
+      
+        <Button basic inverted color="black"><NavLink to='/campgrounds' className=''>CampGrounds</NavLink></Button>
+      </Segment>
+      <br /><br />
     </div>
+    
   )
 }
 
