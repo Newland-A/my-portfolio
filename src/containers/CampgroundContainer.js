@@ -4,6 +4,9 @@ import { fetchCampgrounds} from '../redux/actions/campgroundActions';
 import { NavLink } from 'react-router-dom';
 import NavBar from '../components/NavBar'
 import CampIntro from '../components/campground-finder/CampIntro';
+import {Container} from 'semantic-ui-react';
+import {List} from 'semantic-ui-react';
+import {Segment} from 'semantic-ui-react';
 
 class CampgroundContainer extends Component {
 
@@ -15,32 +18,36 @@ class CampgroundContainer extends Component {
     return (
         <div className='campgrounds'>
         <NavBar />
-          <h2> CampGrounds </h2>
+          <h1> CampGrounds </h1>
         <CampIntro />
-      
-      <section className='campground-body'>
+      <br />
+      <Container width="550px">
         <div className='display-campgrounds'>
-          <ul className='camp-properties'>
+          <List link>
             
           {this.props.camp.campgrounds.map(campground => {
               
               return (
-                
+                <Segment raised >
                 <div className='campground-link' key={campground.id}>
-                  <NavLink to={`/campgrounds/${campground.id}`}>{campground.name}</NavLink>
-                  <li>{campground.description}</li>
+                  <h2><NavLink to={`/campgrounds/${campground.id}`}>{campground.name}</NavLink></h2>
+                  
+                    <List.Item>{campground.description}</List.Item>
                   
                 </div>
+                </Segment> 
               )
             })} 
-            </ul>
+            
+            </List>
         </div>
-      </section>
-      <section>
+      </Container>
+      <br />
+      <Container>
         <div className="more-info">
             <p>More campgrounds coming soon....</p>
         </div>
-      </section>
+      </Container>
       </div>
     );
   }
