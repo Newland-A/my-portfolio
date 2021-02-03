@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import { fetchPosts } from '../redux/actions/blogActions';
 import { NavLink } from 'react-router-dom'
-import NavBar from '../components/NavBar'
 import BlogIntro from '../components/blog-components/BlogIntro';
 import MyTodos from '../components/blog-components/MyTodos';
 import { List } from 'semantic-ui-react';
@@ -16,9 +15,7 @@ class BlogContainer extends Component {
   render() {
     return (  
         <div className='blog'>
-          <NavBar />
-          <br />
-            <h2><a href='/blog'>Blog</a></h2>
+         
           <BlogIntro />
           <br/>
           <Container>
@@ -33,7 +30,7 @@ class BlogContainer extends Component {
                     <Segment raised >
                     <div className='blog-link' key={post.id}>
                       
-                      <h2><NavLink to={`/blog/${post.id}`}>{post.title}</NavLink> </h2>
+                      <h3><NavLink to={`/blog/${post.id}`}>{post.title}</NavLink> </h3>
 
                         <List.Item >{post.created_at.slice(0,10)}:<br /></List.Item>  
                     </div>
