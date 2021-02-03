@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Comment from '../components/blog-components/Comment';
+import {connect} from 'react-redux';
+import {fetchComments} from '../redux/actions/commentActions';
 // parent to comment
 class CommentContainer extends Component {
   constructor(props) {
@@ -17,14 +19,14 @@ class CommentContainer extends Component {
     this.fetchComments()
   }
 
-  fetchComments = () => {
-    fetch('http://localhost:3000/comments')
-    .then(resp => resp.json())
-    .then(comments => this.setState({
-      ...this.state,
-      comments: comments.filter(comment => comment.post_id === this.state.postId),
-    }))
-  }
+  // fetchComments = () => {
+  //   fetch('http://localhost:3000/comments')
+  //   .then(resp => resp.json())
+  //   .then(comments => this.setState({
+  //     ...this.state,
+  //     comments: comments.filter(comment => comment.post_id === this.state.postId),
+  //   }))
+  // }
 
   sendComment = () => {
     fetch('http://localhost:3000/comments', {
@@ -66,6 +68,7 @@ class CommentContainer extends Component {
         content: this.state.content,
         postId: this.state.postId
       }
+      
       this.setState({
         ...this.state,
         name: '',
@@ -91,11 +94,15 @@ class CommentContainer extends Component {
           </form>
         </div>
         <div className="comments-wrapper">
-          {this.state.comments.map(comment => <Comment name={comment.name} content={comment.content} created_at={comment.created_at} id={comment.id} />)}
+          {this.props.state.comments.map(comment => <Comment name={comment.name} content={comment.content} created_at={comment.created_at} id={comment.id} />)}
         </div>
       </div>
     );
   }
 }
-
-export default CommentContainer;
+const mapStateToProps = state => {
+  return({
+    comments: state.comment
+  })
+}
+export default connect(mapStateToProps, {fetchComments})(CommentContainer);

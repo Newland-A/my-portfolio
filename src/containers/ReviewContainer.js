@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Review from '../components/campground-finder/Review';
+// import {connect} from 'react-redux';
+// import { fetchReviews } from '../redux/actions/reviewActions';
+
 import { Feed } from 'semantic-ui-react'
 import { Form } from 'semantic-ui-react';
 class ReviewContainer extends Component {
@@ -11,13 +14,13 @@ class ReviewContainer extends Component {
       title: '',
       description: '',
       score: '',
-      campgroundId: this.props.campgroundId,
+      campground_id: this.props.campgroundId,
       reviews: [],
     }
   }
 
   componentDidMount() {
-    this.fetchReviews()
+    this.props.fetchReviews()
   }
 
   fetchReviews = () => {
@@ -39,7 +42,7 @@ sendReview = () => {
         title: this.state.title,
         description: this.state.description,
         score: this.state.score,
-        campground_id: this.state.campgroundId
+        campgroundId: this.state.campgroundId
 
       }
     })
@@ -83,31 +86,33 @@ handleSubmit = e => {
 }
 
   render() {
+  debugger
     return (
-      
+      <div>
         <div className="new-reviews">
-        <Form>
-          {/* <form id="new-review-form" onSubmit={e => this.handleSubmit(e)}> */}
-
-            {/* <input 
-              type="text" 
-              placeholder="Title" 
-              onChange={e => this.handleTitleChange(e)} value={this.props.title} /><br />*/}
-              <Form.Field label='An HTML <textarea>' control='textarea' rows='6' />
-            {/*<textarea 
-              onChange={e => this.handleDescriptionChange(e)}
-              value={this.props.description} placeholder="Enter Review" /><br />*/}
-              <Form.Field label='An HTML <button>' control='button'>
-      Submit
-    </Form.Field>
-            {/*<input type="submit" value="Submit" /> */}
-          {/* </form> */}
-          </Form>
-       
-        {this.state.reviews.map(review => <Review name={review.title} description={review.description} score={review.score} id={review.id} created_at={review.created_at} />)}
+          <form id="new-review-form">
+            <input type="text" placeholder="Title Review"
+            value={this.props.title} />
+            <textarea value={this.props.description}
+            placeholder="Please leave a Review!" />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+        <div>
+            {this.state.reviews.map(review => <Review title={review.title} description={review.description} created_at={review.created_at}
+            id={review.id} key={review.campground_id}
+            /> )}
+        </div>
       </div>
+      
     );
   }
 }
 
+// const mapStateToProps = state => {
+//   return({
+//     review: state.review
+//   })
+// }
+// export default connect(mapStateToProps, {fetchReviews})(ReviewContainer);
 export default ReviewContainer;
