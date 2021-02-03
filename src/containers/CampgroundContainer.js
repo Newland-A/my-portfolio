@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import { fetchCampgrounds} from '../redux/actions/campgroundActions';
 import { NavLink } from 'react-router-dom';
-import NavBar from '../components/NavBar'
 import CampIntro from '../components/campground-finder/CampIntro';
 import {Container} from 'semantic-ui-react';
 import {List} from 'semantic-ui-react';
@@ -15,9 +14,10 @@ class CampgroundContainer extends Component {
   }
 
   render() {
+    
     return (
         <div className='campgrounds'>
-        <NavBar />
+        
           <h1> CampGrounds </h1>
         <CampIntro />
       <br />
@@ -48,6 +48,7 @@ class CampgroundContainer extends Component {
             <p>More campgrounds coming soon....</p>
         </div>
       </Container>
+      <br /><br />
       </div>
     );
   }
