@@ -2,10 +2,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import ReviewContainer from '../../containers/ReviewContainer.js';
-// import NavBar from 'components/NavBar';
-import { Container } from 'semantic-ui-react';
-import { Image } from 'semantic-ui-react';
-import NavBar from '../NavBar.js';
+import { Container, Segment, Feed, List } from 'semantic-ui-react';
 
 const Campground = ({ match }) => {
   
@@ -14,16 +11,16 @@ const Campground = ({ match }) => {
   const singleCamp = parseInt(campgroundId)
   
   const camps = useSelector(state => state.camp.campgrounds[singleCamp] )
-  debugger
- 
+ debugger
   if(!camps) {
     return(
       <div>
-      <NavBar />
+     
       
       <Container>
         <p>
-          That campground is not here yet! Please check back at a later time!</p>
+          That campground is not here yet! Please check back at a later time!
+        </p>
       </Container>
       </div>
     )
@@ -31,23 +28,43 @@ const Campground = ({ match }) => {
 
   return (
     <div>
-      <NavBar />
-    
-      <Container>
       
-        <h2 id="camp-name">{camps.name}</h2>
-        <image>{camps.image_url}</image>
-        <p className="camp-description">{camps.description}</p>
-        <p>Average Score: {camps.avg_score}</p>
-        <p>Price per night: {camps.price}</p>
-        <p>Hiking Trails: {camps.hiking}</p>
-        <p>Tent Camping: {camps.tent}</p>
-        <p>Can you use hammocks? {camps.hammocks}</p>
-        <p>RV Camping Spots: {camps.rv}</p>
-
+      <Container>
+          <Segment raised>
+          <h2 id="camp-name">{camps.name}</h2>
+          <p>{camps.image_url}</p>
+          <p className="camp-description">{camps.description}</p>
+          <p>Average Score: {camps.avg_score}</p>
+          <p>Price per night: {camps.price}</p>
+          <p>Hiking Trails: {camps.hiking}</p>
+          <p>Tent Camping: {camps.tent}</p>
+          <p>Can you use hammocks? {camps.hammocks}</p>
+          <p>RV Camping Spots: {camps.rv}</p>
+          {/* <p>{camps.reviews}</p> */}
+        </Segment>
         
-       <ReviewContainer campgroundId={campgroundId} />
+        {/* <Segment>
+          <ReviewContainer campgroundId={campgroundId} />
+       </Segment> */}
       </Container>
+      <Container>
+        <List>
+          <p>Reviews: </p>
+          {camps.reviews.map(review => {
+            return (
+              <Segment raised >
+              <List.Item>Title: {review.title}
+              </List.Item>
+              <List.Item> Content: {review.description}
+              </List.Item>
+              <List.Item>Camps Score: {review.score}
+              </List.Item>
+              </Segment>
+            )
+          })}
+        </List>
+      </Container>
+      <br /><br />
     </div>
    
   )
