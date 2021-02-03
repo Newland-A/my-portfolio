@@ -12,11 +12,16 @@ import Blog from './components/blog-components/Blog';
 import CampgroundContainer from './containers/CampgroundContainer';
 import Campground from './components/campground-finder/Campground';
 import ProjectsContainer from './containers/ProjectsContainer';
+import NavBar from './components/NavBar';
+
 
 function App() {
   return (
+   
     <Router>
+    <NavBar />
       <Switch>
+      
         <div className='App'>
           <div className='main-content'>
             <Route exact path='/' component={Home} />
@@ -31,6 +36,7 @@ function App() {
         </div>
       </Switch>
     </Router>
+   
   );
 }
 
