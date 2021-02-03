@@ -1,7 +1,7 @@
 import React from 'react';
 import CommentContainer from '../../containers/CommentContainer';
 import { useSelector } from 'react-redux';
-import {Container, Segment} from 'semantic-ui-react';
+import {Container, Segment, List} from 'semantic-ui-react';
 import NavBar from '../NavBar';
 import { Feed } from 'semantic-ui-react'
 
@@ -18,7 +18,6 @@ import { Feed } from 'semantic-ui-react'
   if (!posts) {
     return(
       <div>
-        <NavBar />
         <Container>
           <h2>Post not found!</h2>
         </Container>
@@ -27,8 +26,6 @@ import { Feed } from 'semantic-ui-react'
   }
   return (
     <div>
-      <NavBar />
-      
       <Container>
         <Segment raised >
 
@@ -39,15 +36,24 @@ import { Feed } from 'semantic-ui-react'
             </div>
 
             <br />
-        
         </Segment>
       </Container>
-      <br /><br />
+
       <Container>
+        <List>
         <Segment raised>
         <p>Please leave Comments, Suggestions, Advice and Encouraging Criticism Welcomed!</p>
-          <CommentContainer postId={postId} />
+          {/* <CommentContainer postId={postId} /> */}
+          {posts.comments.map(comment => {
+            return (
+              <Segment raised>
+                <List.Item>Title: {comment.name}</List.Item>
+                <List.Item>Content: {comment.content}</List.Item>
+              </Segment>
+            )
+          })}
         </Segment>
+        </List>
       </Container>
     </div>
   )
