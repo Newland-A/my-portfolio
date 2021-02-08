@@ -3,12 +3,11 @@ import AboutMe from '../components/header/AboutMe';
 import Myname from '../components/header/Myname';
 import {NavLink} from 'react-router-dom'
 import CampDescription from '../components/campground-finder/CampDescription';
-import Description from '../components/blog-components/Description'
+import CampgroundContainer from '../containers/CampgroundContainer';
 import TechDescription from '../components/technical-porjects/TechDescription'
-import NavBar from '../components/NavBar';
 import { Container, Segment, Grid } from 'semantic-ui-react'
 import BlogContainer from './BlogContainer';
-// import 
+
 export default class Home extends Component {
   render() {
     return (
@@ -22,15 +21,19 @@ export default class Home extends Component {
               <Myname />
               <AboutMe />
             </Container>
+          </Segment>
+          <Segment>
             <br />
             <Container className="projects_home">
               <h2><NavLink to='technical-projects'>Projects</NavLink></h2>
                 <TechDescription />
             </Container>
-              <br />
+            </Segment>
+            <Segment>
             <Container className="campgrounds_home">
               <h2><NavLink to='/campgrounds'>Campgrounds</NavLink></h2>
-              <CampDescription />
+              {/* <CampDescription /> */}
+              <CampgroundContainer />
             </Container>
           </Segment>
         </Grid.Column>
