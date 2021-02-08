@@ -1,8 +1,7 @@
 // import React, { useEffect } from 'react';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import ReviewContainer from '../../containers/ReviewContainer.js';
-import { Container, Segment, Feed, List } from 'semantic-ui-react';
+import { Container, Segment,  List } from 'semantic-ui-react';
 
 const Campground = ({ match }) => {
   
@@ -11,11 +10,10 @@ const Campground = ({ match }) => {
   const singleCamp = parseInt(campgroundId)
   
   const camps = useSelector(state => state.camp.campgrounds[singleCamp] )
- debugger
+ 
   if(!camps) {
     return(
       <div>
-     
       
       <Container>
         <p>
