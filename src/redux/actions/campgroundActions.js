@@ -17,3 +17,4 @@ export const fetchCampgrounds = () => {
     // 
   }
 }
+// Mapdispatch to props magically calls me
