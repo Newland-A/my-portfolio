@@ -1,5 +1,5 @@
 ## Table of Contents
-* [About](Amy Newland Portfolio)
+* [About](About)
 * [Prerequisites](#prerequisites)
 * [Installation](#installation)
 * [Contribution](#contribution)
@@ -7,6 +7,8 @@
 * [License](#license)
 
 # Amy Newland Portfolio
+ 
+# About
 
 My personal portfolio. Utilizing a Rails backend with a postgresql database. Created with a React.js frontend. This portfolio is my last project requirement from [Flatiron School](https://flatironschool.com). Back-end repository can be located [here](https://github.com/Newland-A/portfolio-back-end).
 
