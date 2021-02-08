@@ -17,9 +17,11 @@ class CampgroundContainer extends Component {
     
     return (
         <div className='campgrounds'>
-        
-          <h1> CampGrounds </h1>
-        <CampIntro />
+      <Container>
+        <Segment>
+          <CampIntro />
+        </Segment>
+      </Container>        
       <br />
       <Container width="550px">
         <div className='display-campgrounds'>
