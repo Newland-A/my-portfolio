@@ -8,7 +8,8 @@
 
 # Amy Newland Portfolio
 
-My personal portfolio. Utilizing a Rails backend with a postgresql database. Created with a React.js frontend. This portfolio is my last project requirement from [Flatiron School](https://flatironschool.com). Back-end repository can be located [here](https://github.com/Newland-A/portfolio-back-end).
+My personal portfolio. Utilizing a Rails backend with a postgresql database. Created with a React.js frontend. This portfolio is my last project requirement from [Flatiron School](https://flatironschool.com). Back-end repository can be located [here](https://github.com/Newland-A/portfolio-back-end). This project will always be a work in progress as my experience and knowledge grows.
+
 
 # Prerequisites
   * npm
@@ -44,7 +45,7 @@ My personal portfolio. Utilizing a Rails backend with a postgresql database. Cre
 # Contact
   Amy Newland - [LinkedIn](https://www.linkedin.com/in/amy-newland-developer/) - [Email](ajn252@gmail.com)
 
-Project Link:  
+Project Link:  Coming Soon
 
 # License
   Distributed under the MIT License. See [LICENSE](https://choosealicense.com/licenses/mit/) for more information. © Amy Newland
