@@ -15,11 +15,11 @@ const Campground = ({ match }) => {
     return(
       <div>
       
-      <Container>
-        <p>
-          That campground is not here yet! Please check back at a later time!
-        </p>
-      </Container>
+        <Container>
+          <p>
+            That campground is not here yet! Please check back at a later time!
+          </p>
+        </Container>
       </div>
     )
   }
@@ -40,11 +40,8 @@ const Campground = ({ match }) => {
           <p>RV Camping Spots: {camps.rv}</p>
           {/* <p>{camps.reviews}</p> */}
         </Segment>
-        
-        {/* <Segment>
-          <ReviewContainer campgroundId={campgroundId} />
-       </Segment> */}
       </Container>
+
       <Container>
         <List>
           <p>Reviews: </p>
@@ -62,7 +59,7 @@ const Campground = ({ match }) => {
           })}
         </List>
       </Container>
-      <br /><br />
+      
     </div>
    
   )
