@@ -13,7 +13,10 @@ const NavBar = () => {
         <Button basic  inverted color="dark blue"><NavLink to='/technical-projects' className=''>Projects</NavLink></Button>
       
         <Button basic inverted color="black"><NavLink to='/campgrounds' className=''>CampGrounds</NavLink></Button>
+
+        <Button basic inverted color="red" href="https://github.com/Newland-A">Newland-A </Button> 
       </Segment>
+     
       <br /><br />
     </div>
     
