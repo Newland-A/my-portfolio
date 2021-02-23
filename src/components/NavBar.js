@@ -15,6 +15,8 @@ const NavBar = () => {
         <Button basic inverted color="black"><NavLink to='/campgrounds' className=''>CampGrounds</NavLink></Button>
 
         <Button basic inverted color="dark red" href="https://github.com/Newland-A">Newland-A </Button> 
+
+        <Button basic inverted color="dark red" href="https://www.linkedin.com/in/amy-newland-developer/">Newland-A </Button>
       </Segment>
      
       <br /><br />
