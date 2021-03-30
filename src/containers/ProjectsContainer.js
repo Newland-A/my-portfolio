@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import TechSkills from '../components/technical-porjects/TechSkills';
+import TechSkills from '../components/technical-components/TechSkills';
 import {Container} from 'semantic-ui-react';
 import {Segment} from 'semantic-ui-react';
 import TechProjects from '../components/technical-components/TechProjects';
