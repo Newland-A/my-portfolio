@@ -4,7 +4,7 @@ import Myname from '../components/header/Myname';
 import {NavLink} from 'react-router-dom'
 import CampDescription from '../components/campground-finder/CampDescription';
 import CampgroundContainer from '../containers/CampgroundContainer';
-import TechDescription from '../components/technical-porjects/TechDescription'
+import TechDescription from '../components/technical-components/TechDescription'
 import { Container, Segment, Grid } from 'semantic-ui-react'
 import BlogContainer from './BlogContainer';
 
