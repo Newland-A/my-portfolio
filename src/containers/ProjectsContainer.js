@@ -16,7 +16,9 @@ class ProjectsContainer extends Component {
         
         <Container>
           <h1>Projects</h1>
-          <TechSkills />
+          <Segment>
+            <TechSkills />
+          </Segment>
         </Container>
       </div>
     );
