@@ -24,7 +24,7 @@ class ReviewContainer extends Component {
   }
 
   fetchReviews = () => {
-    fetch('http://localhost:3000/reviews')
+    fetch('http://amy-newland-portfolio-backend.herokuapp.com:3000/reviews')
     .then(resp => resp.json())
     .then(reviews => this.setState({
       ...this.state,
@@ -32,7 +32,7 @@ class ReviewContainer extends Component {
     }))
   }
 sendReview = () => {
-  fetch('http://localhost:3000/reviews', {
+  fetch('http://amy-newland-portfolio-backend.herokuapp.com:3000/reviews', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

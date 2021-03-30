@@ -20,7 +20,7 @@ class CommentContainer extends Component {
   }
 
   // fetchComments = () => {
-  //   fetch('http://localhost:3000/comments')
+  //   fetch('http://amy-newland-portfolio-backend.herokuapp.com:3000/comments')
   //   .then(resp => resp.json())
   //   .then(comments => this.setState({
   //     ...this.state,
@@ -29,7 +29,7 @@ class CommentContainer extends Component {
   // }
 
   sendComment = () => {
-    fetch('http://localhost:3000/comments', {
+    fetch('http://amy-newland-portfolio-backend.herokuapp.com:3000/comments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

@@ -42,7 +42,9 @@ class BlogContainer extends Component {
         </Container>
         <br />
         <Container >
+        <Segment>
           <MyTodos />
+          </Segment>
         </Container>
         </div>
     );

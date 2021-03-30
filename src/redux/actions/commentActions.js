@@ -2,7 +2,7 @@ export const fetchComments = () => {
   debugger
   return dispatch => {
     dispatch({type: 'FETCHING_COMMENTS'})
-    fetch('http://localhost:3000/comments')
+    fetch('http://amy-newland-portfolio-backend.herokuapp.com:3000/comments')
     .then(resp => resp.json())
     .then(comments => {
       dispatch({
