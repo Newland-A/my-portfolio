@@ -1,7 +1,7 @@
 export const fetchPosts = () => {
   return dispatch => {
     dispatch({type: 'FETCHING_POSTS'})
-    fetch('newland-portfolio.herokuapp.com/posts')
+    fetch('http://newland-portfolio.herokuapp.com/posts')
     .then(resp => resp.json())
     .then(posts => {
       dispatch({

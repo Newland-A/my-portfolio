@@ -3,7 +3,7 @@ export const fetchReviews = () => {
   debugger
   return dispatch => {
     dispatch({type: 'FETCHING_REVIEWS'})
-    fetch('newland-portfolio.herokuapp.com/reviews')
+    fetch('http://newland-portfolio.herokuapp.com/reviews')
     .then(resp => resp.json())
     .then(reviews => {
       dispatch({
