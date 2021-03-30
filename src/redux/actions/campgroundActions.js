@@ -2,7 +2,7 @@ export const fetchCampgrounds = () => {
   return dispatch => {
     dispatch({type: 'FETCHING_CAMPS'})
     // 
-    fetch('http://amy-newland-portfolio-backend.herokuapp.com')
+    fetch('newland-portfolio.herokuapp.com/campgrounds')
     .then(resp => resp.json())
     .then(campgrounds => {
       dispatch({
