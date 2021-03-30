@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Comment from '../components/blog-components/Comment';
 import {connect} from 'react-redux';
 import {fetchComments} from '../redux/actions/commentActions';
-// parent to comment
+
 class CommentContainer extends Component {
   constructor(props) {
     super(props)
@@ -19,17 +19,9 @@ class CommentContainer extends Component {
     this.fetchComments()
   }
 
-  // fetchComments = () => {
-  //   fetch('http://amy-newland-portfolio-backend.herokuapp.com')
-  //   .then(resp => resp.json())
-  //   .then(comments => this.setState({
-  //     ...this.state,
-  //     comments: comments.filter(comment => comment.post_id === this.state.postId),
-  //   }))
-  // }
 
   sendComment = () => {
-    fetch('http://amy-newland-portfolio-backend.herokuapp.com', {
+    fetch('http://newland-portfolio.herokuapp.com/comments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
