@@ -25,7 +25,7 @@ export default class Home extends Component {
           <Segment>
             <br />
             <Container className="projects_home">
-              <h2><NavLink to='technical-projects'>Projects</NavLink></h2>
+              <h2><NavLink to='technical-components'>Projects</NavLink></h2>
                 <TechDescription />
             </Container>
             </Segment>
