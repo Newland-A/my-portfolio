@@ -10,7 +10,7 @@
  
 # About
 
-My personal portfolio. Utilizing a Rails backend with a postgresql database. Created with a React.js frontend. This portfolio is my last project requirement from [Flatiron School](https://flatironschool.com). Back-end repository can be located [here](https://github.com/Newland-A/portfolio-back-end). This project will always be a work in progress as my experience and knowledge grows.
+My personal portfolio. Utilizing a Rails backend with a postgresql database. Created with a React.js frontend. This portfolio is my last project requirement from [Flatiron School](https://flatironschool.com). Back-end repository can be located [here](https://github.com/Newland-A/portfolio-back-end). This project will always be a work in progress as my experience and knowledge grows. Update
 
 
 # Prerequisites
@@ -19,7 +19,7 @@ My personal portfolio. Utilizing a Rails backend with a postgresql database. Cre
   * yarn
     `npm install --global yarn`
   ## Check versions
-    `yarn --version` and `
+    `yarn --version`
 
   ## Documentation 
     [NPM](https://docs.npmjs.com/cli/v6/commands/npm-install),
